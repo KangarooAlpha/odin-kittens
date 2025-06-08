@@ -1,0 +1,15 @@
+<h1>Kittens</h1>
+<%= flash[:notice] %>
+
+<%= flash[:alert] %>
+<% if @kittens.present? %>
+    <% @kittens.each do |k| %>
+        <div>
+            <%= link_to k.name, kitten_path(k) %> <br>
+            <%= button_to "Edit", edit_kitten_path(k) %> <br>
+            <%= button_to "Delete", kitten_path(k), method: :delete %> <br>
+        </div>
+    <% end %>
+<% end %>
+
+<%= button_to "New Kitten",new_kitten_path %>

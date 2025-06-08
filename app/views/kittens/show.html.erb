@@ -1,0 +1,8 @@
+<%= link_to "Home", kitten_path %> <br>
+
+<%= @kitten.name%> <br>
+<%= @kitten.age %> <br>
+<%= @kitten.cuteness %> <br>
+<%= @kitten.softness %> <br>
+<%= link_to "Edit", edit_kitten_path(@kitten) %> <br>
+<%= button_to "Delete", kitten_path(@kitten), method: :delete %>
